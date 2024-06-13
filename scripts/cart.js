@@ -117,3 +117,17 @@ if (cart.count > 0) {
   p.innerHTML = "Your cart is Empty !!! ";
   document.querySelector(".cart-items").appendChild(p);
 }
+
+function updateCount() {
+  const navCartCount = document.querySelector(".cart-count");
+  const cartCount = JSON.parse(localStorage.getItem("cart"))?.count || 0;
+  if (cartCount === 0) {
+    navCartCount.style.display = "none";
+  } else {
+    if (navCartCount.style.display == "none") {
+      navCartCount.style.display = "flex";
+    }
+    navCartCount.innerHTML = cartCount;
+  }
+}
+updateCount();
