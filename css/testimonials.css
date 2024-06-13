@@ -1,0 +1,101 @@
+.testimonials {
+  text-align: center;
+  padding: 50px 40px;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 100px 20px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.reviewer-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav-button {
+  background-color: #ff7f00;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#prev-btn {
+  left: -15px;
+}
+
+#next-btn {
+  right: -15px;
+}
+
+.testimonial-content {
+  flex: 1;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.client-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.testimonial-content h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+}
+
+.testimonial-content p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #666;
+}
+
+.testimonial-text {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.food-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .testimonial-card {
+    padding: 70px 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .testimonial-card {
+    padding: 50px 20px;
+    order: 2;
+  }
+  .food-image {
+    order: 1;
+  }
+}

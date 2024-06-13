@@ -1,0 +1,212 @@
+/* hero section styles  */
+.hero-section-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.bike-delivery {
+  background-color: rgba(245, 221, 196, 1);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  gap: 60px;
+  max-width: fit-content;
+}
+.bike-delivery h5 {
+  padding-left: 20px;
+  color: rgba(244, 142, 40, 1);
+}
+.bike-delivery img {
+  width: 50px;
+}
+.bike-delivery .circular-image-container {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 100%;
+}
+.hero-section-container h1 {
+  max-width: 678px;
+  font-size: 76px;
+  line-height: 80px;
+  font-weight: 700;
+  padding: 60px 0;
+}
+.hero-section-container h1 span {
+  color: #f48e28;
+}
+.hero-section-container .left-side > p {
+  max-width: 550px;
+  font-style: 18px;
+  line-height: 22px;
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+.hero-section-container .left-side .button-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.hero-section-container .left-side .button-container button {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  font-style: 26px;
+}
+.hero-section-container .left-side .button-container .video-btn {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.hero-section-container .left-side .button-container button span {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 0px 0px 25px 0px rgba(131, 165, 255, 0.25);
+}
+.hero-section-container .left-side .button-container button span img {
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translateY(-50%);
+}
+.food-mini-card-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 100px;
+}
+.food-mini-card {
+  max-width: 258px;
+  min-width: 258px;
+  height: 260px;
+  position: relative;
+  box-shadow: 0px 0px 31px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 30px 10px 30px 10px;
+  border-radius: 30px;
+}
+.food-mini-card .mini-food-img {
+  width: 100%;
+  height: 254px;
+  position: absolute;
+  left: 0%;
+  top: -35%;
+  object-fit: contain;
+  /* box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.25); */
+}
+.food-mini-card .info {
+  text-align: center;
+  color: #000000;
+}
+.food-mini-card .info h4 {
+  font-weight: bold;
+  font-size: 26px;
+  margin-bottom: 11px;
+}
+.food-mini-card .info p {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 11px;
+}
+.food-mini-card .info h5 {
+  font-weight: 600;
+  font-size: 18px;
+}
+.food-mini-card .info h5 span {
+  color: #be1008;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1024px) {
+  .hero-section-container .left-side h1 {
+    font-size: 68px;
+    line-height: 75px;
+  }
+  .food-mini-card {
+    min-width: 220px;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .hero-section-container .left-side,
+  .hero-section-container .right-side {
+    max-width: 100%;
+  }
+  .hero-section-container {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .hero-section-container .left-side h1 {
+    font-size: 60px;
+    line-height: 70px;
+    padding: 30px 0;
+  }
+  .br {
+    display: none;
+  }
+  .hero-section-container .right-side .food-mini-card-container {
+    padding: 80px 0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
+  }
+  .hero-section-container .right-side .food-mini-card .info h4 {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero-section-container {
+    flex-direction: column;
+    padding: 30px 12px;
+  }
+  .hero-section-container .left-side h1 {
+    font-size: 48px;
+    line-height: 55px;
+    padding: 20px 0;
+  }
+  .hero-section-container .left-side > p {
+    margin-bottom: 40px;
+  }
+  .food-mini-card-container {
+    padding-top: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    row-gap: 60px;
+  }
+  .hero-section-container .right-side .food-mini-card {
+    min-width: 100px !important;
+    width: 100%;
+    height: 220px;
+    padding: 20px;
+  }
+  .food-mini-card .info h4 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 11px;
+  }
+  .food-mini-card .info p {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 11px;
+  }
+  .food-mini-card .info h5 {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .food-mini-card .info h5 span {
+    color: #be1008;
+  }
+}
