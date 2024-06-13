@@ -1,4 +1,4 @@
-const products = [
+export const products = [
   {
     id: 1,
     name: "Gyro Sandwich",
@@ -84,36 +84,3 @@ const products = [
     rating: 5.0,
   },
 ];
-
-const cart = JSON.parse(localStorage.getItem("cart")) || {
-  count: 0,
-  cartProductsId: [],
-};
-
-const cartSummaryCount = document.getElementById("cart-summary-count");
-const cartSummaryTotal = document.getElementById("cart-summary-total");
-if (cart.count > 0) {
-  let total = 0;
-  cart.cartProductsId.forEach((p) => {
-    const div = document.createElement("div");
-    const product = products.find((pr) => pr.id === p.productId);
-    total += product.price.split("$")[1] * p.quantity;
-    div.classList.add("cart-item");
-    div.innerHTML = `
-      <img src="${product.image}" alt="Product 1" />
-      <div class="item-details">
-        <h2>${product.name}</h2>
-        <p>Quantity: ${p.quantity}</p>
-        <p>Price: ${product.price}</p>
-      </div>
-      <button class="remove-btn">Remove</button>
-    `;
-    document.querySelector(".cart-items").appendChild(div);
-  });
-  cartSummaryTotal.innerHTML = `$${total}`;
-  cartSummaryCount.innerHTML = cart.count;
-} else {
-  const p = document.createElement("p");
-  p.innerHTML = "Your cart is Empty !!! ";
-  document.querySelector(".cart-items").appendChild(p);
-}

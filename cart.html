@@ -6,6 +6,7 @@
     <title>Cart page</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
     <style>
       .cart-body {
         display: flex;
@@ -20,7 +21,7 @@
     </style>
   </head>
   <body>
-    <nav>
+    <nav id="navbar">
       <!-- logo -->
       <div>
         <a href="/"
@@ -38,16 +39,25 @@
           <img src="./assets/icons/search-icon.svg" alt="search-icon" />
           <input type="text" placeholder="Search" />
         </div>
-        <div>
+        <div class="cart-icon">
+          <span class="cart-count cart-count-2">0</span>
           <button class="cart-btn">
             <img src="./assets/icons/cart-icon.svg" alt="cart-icon" />
           </button>
         </div>
       </div>
     </nav>
-    <main class="cart-body">
-      <div class="root"></div>
-      <script src="./scripts/cart.js"></script>
+    <main class="cart-container">
+      <section class="cart-items">
+        <h1>Your Cart</h1>
+      </section>
+      <aside class="cart-summary">
+        <h2>Summary</h2>
+        <p id="cart-summary-count">Total Items: 1</p>
+        <p id="cart-summary-total">Total Price: $10.00</p>
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </aside>
     </main>
+    <script src="scripts/cart.js"></script>
   </body>
 </html>
